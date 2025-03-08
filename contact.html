@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header class="sticky">
+        <h1>Contact Me</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="products.html">Products</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><a href="testimonials.html">Testimonials</a></li>
+                <li><a href="blog.html">Blog</a></li>
+                <li><a href="services.html">Services</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="contact">
+        <<form action="contact.php" method="POST">
+    <label>Name:</label>
+    <input type="text" name="name" required>
+    
+    <label>Email:</label>
+    <input type="email" name="email" required>
+
+    <label>Message:</label>
+    <textarea name="message" required></textarea>
+
+    <label>CAPTCHA:</label>
+    <img src="captcha.php" alt="CAPTCHA">
+    <input type="text" name="captcha_code" required>
+
+    <button type="submit">Send</button>
+</form>
+        </form>
+    </section>
+</body>
+</html>

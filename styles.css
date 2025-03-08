@@ -1,0 +1,255 @@
+/* General Styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background: #f4f4f4;
+    color: #333;
+}
+
+/* Sticky Navigation */
+.sticky {
+    position: sticky;
+    top: 0;
+    background: black;
+    color: white;
+    padding: 10px;
+    text-align: center;
+    z-index: 1000;
+}
+
+/* Fade-in Animation */
+.fade-in {
+    opacity: 0;
+    transform: translateY(20px);
+    animation: fadeIn 1.5s ease-out forwards;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+/* Hero Section */
+.hero {
+    text-align: center;
+    padding: 100px 20px;
+    background: url('assets/images/hero-bg.jpg') center/cover fixed;
+    color: white;
+    animation: fadeIn 2s ease-in-out;
+}
+
+/* Parallax Scrolling */
+.parallax {
+    background: url('assets/images/parallax-bg.jpg') center/cover fixed;
+    height: 300px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-size: 2em;
+}
+
+/* Product Gallery with Modals */
+.gallery {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.product img {
+    width: 200px;
+    cursor: pointer;
+    transition: transform 0.5s ease;
+}
+
+.product img:hover {
+    transform: scale(1.2);
+}
+
+/* Modal Popup */
+.modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.7);
+    align-items: center;
+    justify-content: center;
+}
+
+.modal img {
+    width: 50%;
+}
+
+.modal.active {
+    display: flex;
+}
+
+/* Contact Form Styling */
+.contact form {
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+    margin: auto;
+}
+
+.contact input, .contact textarea {
+    padding: 10px;
+    margin: 5px 0;
+}
+
+.contact button {
+    padding: 10px;
+    background: #145DA0;
+    color: white;
+    border: none;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+.contact button:hover {
+    background: #123e6d;
+}
+
+/* Page Load Animation */
+.loader {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 9999;
+}
+
+.loader img {
+    width: 100px;
+    animation: spin 2s linear infinite;
+}
+
+@keyframes spin {
+    from { transform: rotate(0deg); }
+    to { transform: rotate(360deg); }
+}
+
+/* Fade Transition for Pages */
+body {
+    opacity: 0;
+    animation: fadeIn 1s forwards;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+nav ul li a {
+    color: white;
+    padding: 10px 20px;
+    transition: 0.3s;
+}
+
+nav ul li a:hover {
+    background: #ff5733;
+    border-radius: 5px;
+}
+.floating-chat {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background: #145DA0;
+    color: white;
+    padding: 12px 15px;
+    border-radius: 50%;
+    text-decoration: none;
+    font-size: 18px;
+    transition: 0.3s;
+}
+
+.floating-chat:hover {
+    background: #123e6d;
+} 
+
+/* Improved Color Scheme */
+:root {
+    --primary-color: #145DA0;
+    --secondary-color: #0C2D48;
+    --accent-color: #FF5733;
+    --light-bg: #f4f4f4;
+    --dark-bg: #1B1B1B;
+    --text-color: #333;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background: var(--light-bg);
+    color: var(--text-color);
+    transition: background 0.3s, color 0.3s;
+}
+
+/* Better Button Styling */
+button, .chat-btn {
+    padding: 12px 20px;
+    border: none;
+    background: var(--primary-color);
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+    transition: 0.3s;
+    border-radius: 5px;
+}
+
+button:hover, .chat-btn:hover {
+    background: var(--accent-color);
+}
+
+/* Smooth Scrolling */
+html {
+    scroll-behavior: smooth;
+}
+
+/* Fade-in Animation */
+.fade-in {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+
+.fade-in.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Button Animation */
+button, .chat-btn {
+    transform: scale(1);
+    transition: 0.3s ease-in-out;
+}
+
+button:hover, .chat-btn:hover {
+    transform: scale(1.05);
+}
+
+.dark-mode {
+    background: var(--dark-bg);
+    color: white;
+}
+
+.dark-mode nav {
+    background: var(--secondary-color);
+}
+
+.dark-mode button, .dark-mode .chat-btn {
+    background: var(--accent-color);
+}
+
+.dark-mode button:hover, .dark-mode .chat-btn:hover {
+    background: var(--primary-color);
+}
